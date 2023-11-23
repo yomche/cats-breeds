@@ -1,3 +1,4 @@
+// @ts-expect-error this library doesn't have types
 import Flag from "react-world-flags";
 import { CatBreedType } from "../../types/types";
 import { CountriesMap } from "../../utils/countries";
@@ -13,7 +14,7 @@ export const Card = ({ data }: CardProps) => {
     <div className={styles.card}>
       <div className={styles.header}>
         <a
-          href={`https://www.google.com/search?q=${data.breed}+сat&newwindow=1`}
+          href={`https://www.google.com/search?q=${data.breed}+сat`}
           target="_blank"
         >
           {data.breed}

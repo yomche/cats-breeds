@@ -1,17 +1,25 @@
 .container {
-  max-width: 1000px;
+  max-width: var(--max-width);
   width    : 100%;
-  margin   : 20px auto 0;
-  padding  : 0 30px 100px;
+
+  margin   : 0 auto;
   position : relative;
 
   .image {
-    max-width: 500px;
-    width    : 100%;
-    position : absolute;
-    top      : 0;
+    position  : absolute;
+    top       : 10px;
+    transition: top .5s ease;
+
+    &:hover {
+      top: 385px;
+    }
     @media screen and (max-width: 585px) {
       display: none;
+    }
+
+    img {
+      max-width: 500px;
+      width    : 100%;
     }
   }
 
@@ -28,17 +36,32 @@
       color      : var(--orange);
     }
     @media screen and (max-width: 585px) {
-      position: static;
+      margin-top: 20px;
+      position  : static;
     }
   }
 
-  .cards {
-    padding-top          : 380px;
-    display              : grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap                  : 20px;
+  .wrapper {
+    padding-top: 378px;
     @media screen and (max-width: 585px) {
       padding-top: 30px;
     }
+    height     : fit-content;
+
+    .cards {
+      max-width            : var(--max-width);
+      width                : 100%;
+      position             : absolute;
+      z-index              : 0;
+      background-color     : var(--violet);
+      display              : grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap                  : 20px;
+      padding-bottom       : 100px;
+      @media screen and (max-width: 585px) {
+        padding-top: 0;
+      }
+    }
   }
+
 }

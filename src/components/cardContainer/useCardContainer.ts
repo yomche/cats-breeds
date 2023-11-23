@@ -22,6 +22,7 @@ export const useCardContainer = () => {
 
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page]);
 
   const handleScroll = async () => {

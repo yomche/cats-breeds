@@ -11,14 +11,19 @@ export const CardContainer = () => {
         <div className={styles.title}>
           Cats <span>Breeds</span>
         </div>
-        <img className={styles.image} src="./logo.png" />
-        <div className={styles.cards}>
-          {catsData &&
-            catsData.map((cat, idx) => {
-              return <Card data={cat} key={idx} />;
-            })}
+        <div className={styles.image}>
+          <img src="./logo.png" />
         </div>
-        <Loader isLoading={isLoading} />
+        <div className={styles.wrapper}>
+          <div className={styles.cards}>
+            {catsData &&
+              catsData.map((cat, idx) => {
+                return <Card data={cat} key={idx} />;
+              })}
+            <div></div>
+            <Loader isLoading={isLoading} />
+          </div>
+        </div>
       </div>
     </>
   );
