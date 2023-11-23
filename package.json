@@ -1,6 +1,7 @@
 {
-  "name": "infinite-scrolling",
+  "name": "cats-breeds",
   "private": true,
+  "homepage": "https://yomche.github.io/cats-breeds",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -27,6 +28,7 @@
     "eslint": "^8.53.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.4",
+    "gh-pages": "^6.1.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.0"
   }
