@@ -12,7 +12,7 @@ export const CardContainer = () => {
           Cats <span>Breeds</span>
         </div>
         <img className={styles.image} src="./logo.png" />
-        <div className={styles.infContainer}>
+        <div className={styles.cards}>
           {catsData &&
             catsData.map((cat, idx) => {
               return <Card data={cat} key={idx} />;

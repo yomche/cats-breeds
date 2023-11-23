@@ -18,20 +18,20 @@
   .title {
     font-size : 30px;
     text-align: center;
-    color     : white;
+    color     : var(--white);
     position  : absolute;
     z-index   : 1;
     top       : 340px;
 
     span {
-      color: #f09667;
+      color: var(--orange);
     }
     @media screen and (max-width: 585px) {
       position: static;
     }
   }
 
-  .infContainer {
+  .cards {
     padding-top          : 380px;
     display              : grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

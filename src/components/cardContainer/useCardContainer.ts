@@ -5,15 +5,14 @@ import { CatBreedType } from "../../types/types";
 export const useCardContainer = () => {
   const [catsData, setCatsData] = useState<CatBreedType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
-
   const [page, setPage] = useState(1);
 
-  const getPassengersData = async () => {
+  const apiEndpoint = `https://catfact.ninja/breeds?page=${page}&limit=9`;
+
+  const fetchData = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(
-        `https://catfact.ninja/breeds?page=${page}&limit=9`
-      );
+      const response = await axios.get(apiEndpoint);
       setCatsData((prev) => [...prev, ...response.data.data]);
       setIsLoading(false);
     } catch (err) {
@@ -21,13 +20,11 @@ export const useCardContainer = () => {
     }
   };
 
-  console.log(catsData);
-
   useEffect(() => {
-    getPassengersData();
+    fetchData();
   }, [page]);
 
-  const handleScrollEvent = async () => {
+  const handleScroll = async () => {
     const totalHeight = document.documentElement.scrollHeight;
     const innerHeight = window.innerHeight;
     const scrollTop = document.documentElement.scrollTop;
@@ -41,9 +38,9 @@ export const useCardContainer = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollEvent);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScrollEvent);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return { catsData, isLoading };

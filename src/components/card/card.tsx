@@ -7,13 +7,12 @@ interface CardProps {
 
 export const Card = ({ data }: CardProps) => {
   return (
-    <div className={styles.contentCard}>
-      <div className={styles.cardHeader}>
-        <h3>{data.breed}</h3>
-      </div>
-      <div>{data.breed}</div>
-
-      <p className={styles.trips}>{data.breed}</p>
+    <div className={styles.card}>
+      <div className={styles.header}>{data.breed}</div>
+      <div>{data.country}</div>
+      <div>{data.origin}</div>
+      <div>{data.coat}</div>
+      <div>{data.pattern}</div>
     </div>
   );
 };

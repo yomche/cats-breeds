@@ -6,12 +6,14 @@ interface LoaderProps {
 }
 
 export const Loader = ({ isLoading }: LoaderProps) => {
+  const loaderColor = "#F09667";
+
   return (
     <div className={styles.loader}>
       <Bars
         height="80"
         width="80"
-        color="#F09667"
+        color={loaderColor}
         wrapperStyle={{}}
         wrapperClass=""
         visible={isLoading}
