@@ -1,20 +1,36 @@
 .card {
   display         : flex;
   flex-direction  : column;
-  justify-content : space-between;
   color           : var(--white);
   background-color: var(--light-violet);
   box-shadow      : 10px 10px 20px 4px rgba(35, 33, 54, 1);
   border-radius   : 10px;
   padding         : 16px;
-  gap             : 30px;
+  gap             : 20px;
 
   .header {
-    font-family     : "EduVICWANTBeginner";
-    font-size       : 25px;
-    text-align      : center;
-    background-color: var(--orange);
-    border-radius   : 10px;
-    padding         : 8px;
+    font-family          : "EduVICWANTBeginner";
+    display              : grid;
+    grid-template-columns: 1fr 40px;
+    font-size            : 25px;
+    align-items          : center;
+    background-color     : var(--orange);
+    border-radius        : 10px;
+    padding              : 8px;
+
+    a {
+      color: var(--white);
+    }
+  }
+
+  .item {
+    display    : flex;
+    align-items: center;
+    gap        : 10px;
+    font-size  : 20px;
+
+    p {
+      color: var(--orange);
+    }
   }
 }
