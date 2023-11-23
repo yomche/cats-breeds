@@ -1,0 +1,43 @@
+.container {
+  max-width: 1000px;
+  width    : 100%;
+  margin   : 20px auto 0;
+  padding  : 0 30px;
+  position : relative;
+
+  .image {
+    max-width: 500px;
+    width    : 100%;
+    position : absolute;
+    top      : 0;
+    @media screen and (max-width: 585px) {
+      display: none;
+    }
+  }
+
+  .title {
+    font-size : 30px;
+    text-align: center;
+    color     : white;
+    position  : absolute;
+    z-index   : 1;
+    top       : 340px;
+
+    span {
+      color: #f09667;
+    }
+    @media screen and (max-width: 585px) {
+      position: static;
+    }
+  }
+
+  .infContainer {
+    padding-top          : 380px;
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap                  : 20px;
+    @media screen and (max-width: 585px) {
+      padding-top: 30px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+.contentCard {
+  background-color: #39384e;
+  box-shadow      : 10px 10px 20px 4px rgba(35, 33, 54, 1);
+  border-radius   : 10px;
+  color           : white;
+  padding         : 16px;
+  display         : flex;
+  flex-direction  : column;
+  justify-content : space-between;
+
+  .cardHeader {
+    display        : flex;
+    justify-content: space-between;
+    font-size      : 20px;
+    align-items    : center;
+    gap            : 10px;
+  }
+
+  .trips {
+    background-color: #f09667;
+    border-radius   : 20px;
+    font-weight     : 600;
+    width           : fit-content;
+    padding         : 8px;
+    font-size       : 20px;
+  }
+}
