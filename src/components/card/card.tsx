@@ -43,6 +43,11 @@ export const Card = ({ data }: CardProps) => {
           {data.pattern}
         </div>
       )}
+      {!data.pattern && !data.coat && !data.origin && (
+        <div className={styles.item}>
+          <p>No data </p>
+        </div>
+      )}
     </div>
   );
 };

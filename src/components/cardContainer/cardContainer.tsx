@@ -18,8 +18,8 @@ export const CardContainer = () => {
               return <Card data={cat} key={idx} />;
             })}
         </div>
+        <Loader isLoading={isLoading} />
       </div>
-      <Loader isLoading={isLoading} />
     </>
   );
 };
