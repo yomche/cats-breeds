@@ -24,7 +24,8 @@
     top       : 340px;
 
     span {
-      color: var(--orange);
+      font-family: "EduVICWANTBeginner";
+      color      : var(--orange);
     }
     @media screen and (max-width: 585px) {
       position: static;
