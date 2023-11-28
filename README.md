@@ -4,7 +4,7 @@
 ![](public/screen.gif)
 ## Project Demo
 
-The working version can be viewed on [GitHub Pages](yomche.github.io/cats-breeds/)
+The working version can be viewed on [GitHub Pages](https://yomche.github.io/cats-breeds/)
 
 ## Built with
 - React
